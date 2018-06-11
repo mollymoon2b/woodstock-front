@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'coasterblack';
+    src: url('./image/font/coasbl__-webfont.woff2') format('woff2'),
+    url('./image/font/coasbl__-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'coasterblack';
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+body {
+    background-color: #2A333C;
+    margin: 0;
+    padding: 0;
+}
