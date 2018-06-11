@@ -23,8 +23,7 @@ class Home extends React.Component {
             data.append('file', this.uploadInput.files[0]);
             data.append('filename', `${name}${this.uploadInput.files[0].lastModified}`);
             this.state.error = '';
-            // fetch('https://powerful-tundra-37364.herokuapp.com/upload', {
-            fetch('http://localhost:8000/upload', {
+            fetch('http://woodstock.manomano.com:8000/upload', {
                 method: 'POST',
                 body: data,
             }).then((response) => {

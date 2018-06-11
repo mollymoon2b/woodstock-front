@@ -2,7 +2,7 @@ import { call, put, takeEvery } from 'redux-saga/effects'
 
 export function* fetchCall(){
     // const response = yield call(fetch, `https://powerful-tundra-37364.herokuapp.com/images`);
-    const response = yield call(fetch, `http://localhost:8000/images`);
+    const response = yield call(fetch, `http://woodstock.manomano.com:8000/images`);
     const data = yield call([response, response.json]);
 
     yield put({type: 'LOAD_FILES', payload: data});
@@ -17,7 +17,7 @@ export function* updateVote(action){
     const id = action.payload.id;
     if (id) {
         // const response = yield call(fetch, `https://powerful-tundra-37364.herokuapp.com/addVote`, {
-        const response = yield call(fetch, `http://localhost:8000/addVote`, {
+        const response = yield call(fetch, `http://woodstock.manomano.com:8000/addVote`, {
             method: 'POST',
             body: JSON.stringify({
                 id
